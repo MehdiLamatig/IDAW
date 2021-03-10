@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>CV</title>
+        <?php
+        require_once('template_header.php');
+        ?>
     </head>
     <body>
         <h1>Mon CV</h1>
@@ -18,5 +19,10 @@
             <section>Expérience culinaire</section>
             <section><a href="CVMehdiLamatig.pdf">Mon CV</a></section>
         </article>
+        <footer>
+          <?php
+          require_once('template_footer.php');
+          ?>
+        </footer>
     </body>
 </html>

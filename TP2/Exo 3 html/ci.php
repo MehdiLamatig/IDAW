@@ -1,7 +1,8 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Hobbies</title>
+        <?php
+        require_once('template_header.php');
+        ?>
     </head>
     <body>
         <h1>Centre d'intérêts</h1>
@@ -17,5 +18,10 @@
             <section>Management</section>
             <section>Voyage</section>
         </article>
+        <footer>
+          <?php
+          require_once('template_footer.php');
+          ?>
+        </footer>
     </body>
 </html>
