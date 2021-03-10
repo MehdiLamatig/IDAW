@@ -8,11 +8,10 @@
     <body>
         <h1>Mon CV</h1>
         <nav class="menu">
-            <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a id="currentpage" href="cv.html">CV</a></li>
-            <li><a href="ci.html">Centre d'intérêts</a></li>
-            </ul>
+            <?php
+            require_once('template_menu.php');
+            renderMenuToHTML('cv');
+            ?>
         </nav>
         <article>
             <section>Formation</section>

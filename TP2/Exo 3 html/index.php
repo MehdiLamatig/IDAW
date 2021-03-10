@@ -8,11 +8,10 @@
       <body>
         <h1>Qui suis-je ?</h1>
         <nav class="menu">
-          <ul>
-          <li><a id="currentpage" href="index.html">Accueil</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="ci.html">Centre d'intérêts</a></li>
-          </ul>
+          <?php
+          require_once('template_menu.php');
+          renderMenuToHTML('index');
+          ?>
         </nav>
         <article>
           <h2 style="color:purple;">Etudiant-ingénieur à la recherche d'un stage de 4 mois durant lequel je serai amené à:</h2>
