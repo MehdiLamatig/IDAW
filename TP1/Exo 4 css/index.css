@@ -11,3 +11,8 @@ h1{front: size 16px;color:orange;}
     border: 2px solid blue;
     box-sizing: border-box;
 }
+.h1{
+    background-color: lightBlue;
+    width: 400px;
+    height: 100px;
+}
