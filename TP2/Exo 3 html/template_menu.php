@@ -5,7 +5,7 @@ function renderMenuToHTML($currentPageId) {
         // idPage titre
         'index' => array( 'Accueil' ),
         'cv' => array( 'Cv' ),
-        'ci' => array('Mes ci')
+        'ci' => array('Mes hobbies')
     );
 
     echo "<nav class=\"menu\">";
