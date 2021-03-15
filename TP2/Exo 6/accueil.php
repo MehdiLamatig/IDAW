@@ -1,7 +1,3 @@
-<?php
-require_once('template_header.php');
-?>
-
 <h1>Qui suis-je ?</h1>
 
 <article class="corps">

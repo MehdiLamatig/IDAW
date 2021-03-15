@@ -16,3 +16,7 @@ h1{front: size 16px;color:orange;}
     width: 400px;
     height: 100px;
 }
+body
+{
+    background-image: url("fond.jpg");
+}

@@ -14,5 +14,12 @@ function renderMenuToHTML($currentPageId) {
         echo "href=$pageId.php>$pageParameters[0]</a></li>";
     }
     echo "</u1></nav>";
+
+    foreach($mymenu as $pageId2) {
+        $currentPageId = $pageId2;
+        if(isset($_GET['page'])) {
+            $currentPageId = $_GET['page'];
+        }
+    }
 }
 ?>
