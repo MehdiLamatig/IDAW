@@ -1,7 +1,7 @@
 <?php
 function renderMenuToHTML($currentPageId) {
     $mymenu = array(
-        'index' => array( 'Accueil' ),
+        'accueil' => array( 'Accueil' ),
         'cv' => array( 'Cv' ),
         'ci' => array('Mes hobbies')
     );
@@ -11,15 +11,8 @@ function renderMenuToHTML($currentPageId) {
         echo "<li><a ";
         if ($currentPageId==$pageId)
             echo "class=\"selected\"";
-        echo "href=$pageId.php>$pageParameters[0]</a></li>";
+        echo "href=index.php?page=$pageId>$pageParameters[0]</a></li>";
     }
     echo "</u1></nav>";
-
-    foreach($mymenu as $pageId2) {
-        $currentPageId = $pageId2;
-        if(isset($_GET['page'])) {
-            $currentPageId = $_GET['page'];
-        }
-    }
 }
 ?>
