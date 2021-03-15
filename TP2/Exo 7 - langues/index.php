@@ -18,16 +18,16 @@ if(isset($_GET['page'])) {
 </header>
 
 <?php
-renderMenuToHTML($currentPageId);
+  renderMenuToHTML($currentPageId,$currentLangage);
 ?>
 
 <section class="corps">
 <?php
-$pageToInclude = $currentPageId . ".php";
-if(is_readable($pageToInclude))
-require_once($pageToInclude);
-else
-require_once("error.php");
+  $pageToInclude = $currentLangage."/".$currentPageId . ".php";
+  if(is_readable($pageToInclude))
+    require_once($pageToInclude);
+  else
+    require_once("error.php");
 ?>
 </section>
 
