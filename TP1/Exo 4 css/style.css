@@ -1,13 +1,6 @@
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-  
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+/* article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
-}
+} */
   
 body {
     margin: 0;
@@ -18,12 +11,17 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
-    background-image: url("fond.jpg");
+    /* background-image: url("fond.jpg"); */
+    background-color: mediumpurple;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+}
+
+#selected{
+    color: rgb(11, 61, 146);
 }
 
 footer {
