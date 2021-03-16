@@ -1,11 +1,4 @@
 <?php
-    // $username = "Patrick";
-    // if(isset($_GET['login']))
-    //     $username=$_GET['login'];
-    // print_r($_GET);
-
-
-    // on simule une base de données
     $users = array(
     // login => password
         'riri' => 'fifi',
@@ -13,9 +6,9 @@
     $login = "anonymous";
     $errorText = "";
     $successfullyLogged = false;
-    if(isset($_GET['login']) && isset($_GET['password'])) {
-        $tryLogin=$_GET['login'];
-        $tryPwd=$_GET['password'];
+    if(isset($_POST['login']) && isset($_POST['password'])) {
+        $tryLogin=$_POST['login'];
+        $tryPwd=$_POST['password'];
         // si login existe et password correspond
         if( array_key_exists($tryLogin,$users) && $users[$tryLogin]==$tryPwd ) {
             $successfullyLogged = true;
