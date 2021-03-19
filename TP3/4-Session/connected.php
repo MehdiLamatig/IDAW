@@ -26,4 +26,13 @@
         $_SESSION['login'] = $tryLogin;
         echo "<h1>Bienvenue ".$login."</h1>";
     }
+
+    if ($_SESSION == array()){
+        require_once("login.php");
+    }
+    else{
+        $currentLogin = $_SESSION['login'];
+        echo "<center> Vous êtes connecté en tant que $currentLogin";
+        echo "<a href=\"disconnected.php\"><button type=\"button\">Déconnexion</button></a></center>";
+    }
 ?>
