@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dimeh en javascript</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <script src = "https://code.jquery.com/jquery-3.6.0.js" ></script>
+    </head>  
+    <body>
+        <header><h1>Voici un tableau</h1></header>
+        <table>
+            <thead>
+                <tr>
+                    <td>Nom</td>
+                    <td>Prénom</td>
+                    <td>Date de naissance</td>
+                    <td>Remarque</td>
+                </tr>
+            </thead>
+            <tbody id="studentsTableBody">
+                <!-- <tr>
+                    <td>Lamatig</td>
+                    <td>Mehdi</td>
+                    <td>18/11/1999</td>
+                    <td>Cool</td>
+                </tr>
+                <tr>
+                    <td>Khosrow</td>
+                    <td>Sam</td>
+                    <td>01/01/1999</td>
+                    <td>Dikeup</td>
+                </tr> -->
+            </tbody>
+        </table>
+
+        <form onsubmit="onFormSubmit();" autocomplete="off">
+            <p>Nom <input type="text" id="IDnom" name="nom"></p>
+            <p>Prenom <input type="text" id="IDprenom" name="prenom"></p>
+            <p>Date de naissance <input type="IDdate" id="IDdate" name="date"></p>
+            <p>Remarque: <textarea id="IDremarque" name="remarque"></textarea></p>
+            <p><button type="submit">Submit</button></p>
+        </form>
+
+        <script>
+            function onFormSubmit() {
+                // prevent the form to be sent to the server
+                event.preventDefault();
+                let nom = $("#IDnom").val();
+                let prenom = $("#IDprenom").val();
+                let date = $("#IDdate").val();
+                let remarque = $("#IDremarque").val();
+                if($("#IDnom").val() != '' ){
+                    $("#studentsTableBody").append(
+                        `<tr><td>${nom}</td>
+                        <td>${prenom}</td>
+                        <td>${date}</td>
+                        <td>${remarque}</td>
+                        <td><button onclick="edit(${nom});">Edit</button></td></tr>`);
+                }
+            }
+        </script>
+    </body>
+</html>
